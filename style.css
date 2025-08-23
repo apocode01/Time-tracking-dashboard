@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --purple600: hsl(246, 80%, 60%);
+    --orange300: hsl(15, 100%, 70%);
+    --blue300: hsl(195, 74%, 62%);
+    --pink400: hsl(348, 100%, 68%);
+    --green400: hsl(145, 58%, 55%);
+    --purple700: hsl(264, 64%, 52%);
+    --yellow300: hsl(43, 84%, 65%);
+    --navy950: hsl(226, 43%, 10%);
+    --navy900: hsl(235, 46%, 20%);
+    --purple500: hsl(235, 45%, 61%);
+    --navy200: hsl(236, 100%, 87%);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,22 +26,94 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: var(--navy950);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 4rem 1rem;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.mainBox {
+    grid-row: 1;
+    background-color: var(--navy900);
+    border-radius: 0.625rem;
 }
 
 .card {
-    border: solid 1px;
-    grid-row: 1 / 3;
-    grid-column: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: var(--purple600);
+    border-radius: 0.625rem;
+    padding: 1rem;
+}
+
+.card img {
+    height: 3rem;
+    border: solid 2px white;
+    border-radius: 50%;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .timeBox {
-    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0.625rem;
+}
+
+.timeBox .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navy900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#Work {
+    background-color: var(--orange300);
+}
+
+#Play {
+    background-color: var(--blue300);
+}
+
+#Study {
+    background-color: var(--pink400);
+}
+
+#Exercise {
+    background-color: var(--green400);
+}
+
+#Social {
+    background-color: var(--purple700);
+}
+
+#SelfCare {
+    background-color: var(--yellow300);
 }
 
 .attribution { 
