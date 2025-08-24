@@ -1,4 +1,4 @@
-fetchJsonData("daily");
+fetchJsonData("weekly");
 
 function populateDOM(data, timeframe) {
     data.forEach(item => {
@@ -21,3 +21,28 @@ async function fetchJsonData(timeframe) {
         populateDOM(data, timeframe);
     }
 }
+
+const daily = document.getElementById(`daily`);
+const weekly = document.getElementById(`weekly`);
+const monthly = document.getElementById(`monthly`);
+
+daily.addEventListener('click', event => {
+    fetchJsonData("daily");
+    daily.classList.add('active');
+    weekly.classList.remove('active');
+    monthly.classList.remove('active');
+})
+
+weekly.addEventListener('click', event => {
+    fetchJsonData("weekly");
+    daily.classList.remove('active');
+    weekly.classList.add('active');
+    monthly.classList.remove('active');
+})
+
+monthly.addEventListener('click', event => {
+    fetchJsonData("monthly");  
+    daily.classList.remove('active');
+    weekly.classList.remove('active');
+    monthly.classList.add('active');
+})
