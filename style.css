@@ -36,8 +36,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 17rem;
+    grid-template-rows: repeat(7, 8rem);
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -124,11 +124,15 @@ body {
 
 .backgroundIcon {
     position: absolute;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: auto;
+    width: 4rem;
     z-index: 0;
     top: -0.5rem;
     right: 1rem;
+}
+
+#Exercise .backgroundIcon {
+    top: 0rem;
 }
 
 .content {
@@ -206,8 +210,8 @@ body {
 @media screen and (min-width: 60rem) {
     .container {
         display: grid;
-        grid-template-columns: repeat(4, 13rem);
-        grid-template-rows: repeat(2, 12rem);
+        grid-template-columns: repeat(4, 14rem);
+        grid-template-rows: repeat(2, 13rem);
         gap: 1rem;
         margin-bottom: 2rem;
     }
@@ -240,4 +244,7 @@ body {
         gap: 0.8rem;
     }
 
+    .content {
+        padding: 1.5rem;
+    }
 }
